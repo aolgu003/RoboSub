@@ -17,7 +17,7 @@ ToDo:
 -----
 ..* Add message parsing on nuc
 
---* Tune vision further
+--* Tune vision 
 
 2. harness_tests- This folder contains the files for unit subsystems test right now it contains the files to test webcams
 and the ground markers
