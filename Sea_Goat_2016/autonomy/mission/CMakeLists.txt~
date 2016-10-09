@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 2.6)
+project(seagoat)
+
+MESSAGE(STATUS "Project source directory:     " ${PROJECT_SOURCE_DIR})
+
+include_directories( "${PROJECT_SOURCE_DIR}/../comms" )
+include_directories ("${PROJECT_SOURCE_DIR}/../vision/seagoat_vision/include")
+find_package( OpenCV REQUIRED )
+
+add_subdirectory(../comms ./comms)
+add_subdirectory(../vision ./vision)
+
+add_subdirectory( test_mission )
+add_subdirectory( comms_test )
+

@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/andrew/Projects/RoboSub/Sea_Goat_2016/autonomy/seagoat_vision/include/comms.h
+termios.h
+-
+string
+-
+
+/home/andrew/Projects/RoboSub/Sea_Goat_2016/autonomy/seagoat_vision/include/seagoat_vision.cpp
+seagoat_vision.h
+/home/andrew/Projects/RoboSub/Sea_Goat_2016/autonomy/seagoat_vision/include/seagoat_vision.h
+segmentation.h
+/home/andrew/Projects/RoboSub/Sea_Goat_2016/autonomy/seagoat_vision/include/segmentation.h
+
+/home/andrew/Projects/RoboSub/Sea_Goat_2016/autonomy/seagoat_vision/include/seagoat_vision.h
+opencv2/core/core.hpp
+/home/andrew/Projects/RoboSub/Sea_Goat_2016/autonomy/seagoat_vision/include/opencv2/core/core.hpp
+opencv2/imgproc/imgproc.hpp
+/home/andrew/Projects/RoboSub/Sea_Goat_2016/autonomy/seagoat_vision/include/opencv2/imgproc/imgproc.hpp
+opencv2/highgui/highgui.hpp
+/home/andrew/Projects/RoboSub/Sea_Goat_2016/autonomy/seagoat_vision/include/opencv2/highgui/highgui.hpp
+opencv2/opencv.hpp
+/home/andrew/Projects/RoboSub/Sea_Goat_2016/autonomy/seagoat_vision/include/opencv2/opencv.hpp
+iostream
+-
+math.h
+-
+string.h
+-
+comms.h
+/home/andrew/Projects/RoboSub/Sea_Goat_2016/autonomy/seagoat_vision/include/comms.h
+
+/home/andrew/Projects/RoboSub/Sea_Goat_2016/autonomy/seagoat_vision/include/segmentation.h
+opencv2/core/core.hpp
+/home/andrew/Projects/RoboSub/Sea_Goat_2016/autonomy/seagoat_vision/include/opencv2/core/core.hpp
+opencv2/imgproc/imgproc.hpp
+/home/andrew/Projects/RoboSub/Sea_Goat_2016/autonomy/seagoat_vision/include/opencv2/imgproc/imgproc.hpp
+opencv2/highgui/highgui.hpp
+/home/andrew/Projects/RoboSub/Sea_Goat_2016/autonomy/seagoat_vision/include/opencv2/highgui/highgui.hpp
+

@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+//home/andrew/Projects/RoboSub/Sea_Goat_2016/vision/harness_tests/square_det/squares.cpp
+opencv2/core/core.hpp
+//home/andrew/Projects/RoboSub/Sea_Goat_2016/vision/harness_tests/square_det/opencv2/core/core.hpp
+opencv2/imgproc/imgproc.hpp
+//home/andrew/Projects/RoboSub/Sea_Goat_2016/vision/harness_tests/square_det/opencv2/imgproc/imgproc.hpp
+opencv2/highgui/highgui.hpp
+//home/andrew/Projects/RoboSub/Sea_Goat_2016/vision/harness_tests/square_det/opencv2/highgui/highgui.hpp
+iostream
+-
+math.h
+-
+string.h
+-
+numeric
+-
+

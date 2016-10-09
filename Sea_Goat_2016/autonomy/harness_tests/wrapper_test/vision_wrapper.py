@@ -1,0 +1,5 @@
+import ctypes
+
+testlib = ctypes.CDLL('/home/andrew/Projects/RoboSub/Sea_Goat_2016/autonomy/vision/harness_tests/segmentation/build/include/libsegmentation.so')
+testlib.thresh
+print 'done'

@@ -1,0 +1,5 @@
+/home/andrew/Projects/RoboSub/Sea_Goat_2016/autonomy/build/seagoat_vision/include/CMakeFiles/comms.dir
+/home/andrew/Projects/RoboSub/Sea_Goat_2016/autonomy/build/mission/comms_test/CMakeFiles/comms_mission.dir
+/home/andrew/Projects/RoboSub/Sea_Goat_2016/autonomy/build/seagoat_vision/include/CMakeFiles/seagoat_vision.dir
+/home/andrew/Projects/RoboSub/Sea_Goat_2016/autonomy/build/seagoat_vision/include/CMakeFiles/segmentation.dir
+/home/andrew/Projects/RoboSub/Sea_Goat_2016/autonomy/build/mission/test_mission/CMakeFiles/test_mission.dir

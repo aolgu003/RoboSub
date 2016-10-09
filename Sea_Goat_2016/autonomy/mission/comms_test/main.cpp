@@ -1,0 +1,52 @@
+#include <iostream>
+#include "seagoat_vision.h"
+#include "segmentation.h"
+//#include "comms.h"
+#include <unistd.h>
+
+using namespace std;
+using namespace cv;
+
+int main( int argc, char* argv[] ) {
+
+	cArduino stm_port( B9600bps, "/dev/ttyACM1");
+	string message;
+	int cnt = 0;
+	float number = 3.0;
+	ostringstream packet;
+
+	while (true) {
+		if (stm_port.isOpen()) {
+			message = stm_port.read();
+			cout << "Received message:   " << message << endl;
+			packet << "c" << number*2 << "," << cnt;
+			cnt++;
+			
+			
+
+			if (cnt == 4) {
+				cnt = 0;
+				stm_port.write("");
+			}
+			usleep(500);
+		} else {
+			cout << "Port is not open" << endl;
+		}
+	}
+
+	return 0;
+}
+
+/* 
+
+Mission structure
+
+main() {
+
+//INitialization
+//main while loop
+
+}
+
+//some sort of state machine
+*/

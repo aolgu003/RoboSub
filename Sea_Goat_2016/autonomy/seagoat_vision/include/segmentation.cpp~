@@ -1,0 +1,74 @@
+#include "seagoat_vision.h"
+#include "segmentation.h"
+
+#include "opencv2/core/core.hpp"
+#include "opencv2/imgproc/imgproc.hpp"
+#include "opencv2/highgui/highgui.hpp"
+#include <iostream>
+#include <math.h>
+#include <string>
+#include <fstream>
+
+using namespace std;
+using namespace cv;
+
+segmentation::segmentation(char classification) {
+	/* what if we were to read from text file so that we can modify easily using JK's slider code that he has */ 
+	ifstream thresholds;
+	string line;
+	cout << "Setting thresholds for: " << endl;
+	if (classification == 0) {
+
+	} else if(classification == 1) {
+		cout << "thresholds/MARKER.txt" << endl;
+		thresholds.open("thresholds/MARKER.txt");
+		int i = 0;
+		int thresh_val;
+		while (getline( thresholds, line )) {
+			cout << "Getting lines" << endl;
+			thresh_val = atoi(line.c_str());
+			cout << thresh_val << endl;
+			if (i == 0) {
+				hue_upper = thresh_val;
+			} else if (i == 1) {
+				hue_lower = thresh_val;
+			} else if (i == 2) {
+				sat_upper = thresh_val;
+			} else if (i == 3) {
+				sat_lower = thresh_val;
+			} else if (i == 4) {
+				var_upper = thresh_val;
+			} else if (i == 5) {
+				sat_lower = thresh_val;
+			}
+		}
+		thresholds.close();
+		
+	} else if(classification == 2) {
+		cout << "Searching for red buoy" << endl;
+	} else if(classification == 3) {
+		cout << "Searching for yellow buoy" << endl;
+	} else if(classification == 4) {
+		cout << "Searching for green buoy" << endl;
+	} else if(classification == 5) {
+		cout << "Searching for manuvering gate" << endl;
+	} else if(classification == 6) {
+		cout << "Searching for bins" << endl;
+	} else if(classification == 7) {
+		cout << "Searching for torpedo target" << endl;
+	} else if(classification == 8) {
+		cout << "Searching for end gate" << endl;
+	} else {
+		cout << "Error: No such target classification" << endl;
+	}
+} 	
+
+
+void segmentation::highlight_invarient(Mat& src) {
+	
+	results = sha;
+}
+
+
+
+

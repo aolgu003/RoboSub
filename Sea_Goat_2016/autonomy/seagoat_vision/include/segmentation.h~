@@ -1,0 +1,26 @@
+#include "opencv2/core/core.hpp"
+#include "opencv2/imgproc/imgproc.hpp"
+#include "opencv2/highgui/highgui.hpp"
+
+
+//There are the algorithms
+#define HIGHLIGHT_INVARIENT 0
+
+class segmentation {	
+	public:
+		Mat result;
+	private:
+		int hue_upper;
+ 		int hue_lower;
+		int sat_upper;
+		int sat_lower;
+		int var_upper;
+		int var_lower;
+	public:
+		segmentation(char classification);
+
+		void highlight_invarient(Mat& src);
+
+	private:
+		void set_thresholds(char classification);
+};

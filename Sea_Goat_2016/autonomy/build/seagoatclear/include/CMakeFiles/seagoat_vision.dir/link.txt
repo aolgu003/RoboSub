@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC    -shared -Wl,-soname,libseagoat_vision.so -o libseagoat_vision.so CMakeFiles/seagoat_vision.dir/seagoat_vision.cpp.o 

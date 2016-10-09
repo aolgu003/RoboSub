@@ -1,0 +1,60 @@
+#include "mbed.h"
+#include "rtos.h"
+#include "comms.h"
+
+
+Serial pc(USBTX, USBRX); // tx, rx
+DigitalOut led1(LED1);
+
+void print_char(char c)
+{
+    printf("Hello world\n", c);
+    fflush(stdout);
+    led1 = !led1;
+}
+
+char read_char() {
+    char c;
+    c = pc.getc();
+
+    return c;
+}
+
+void comms_thread(void const *argument) {
+    int pkt_length;
+    const char* pkt_buf;
+    while(1) {
+        Thread::wait(1000);
+        led1 = !led1;
+        pkt_buf = make_hello_packet(&pkt_length);
+        for(int i = 0; i < pkt_length; i++)
+            print_char(pkt_buf[i]);
+    }
+}
+
+
+void echo_thread(void const *argument)
+{
+    char c = 0;
+    while(1) {
+        Thread::wait(1000);
+		printf("Hello world\n");
+        /*if (pc.readable()) {
+            c = read_char();
+            print_char(c);
+            
+        } */ 
+    }    
+}
+
+int main()
+{
+    printf("\n\n*** RTOS basic example ***\n");
+    
+    Thread thread1(comms_thread, NULL, osPriorityNormal, DEFAULT_STACK_SIZE);
+    
+    while (true) {
+        //led1 = !led1;
+        Thread::wait(500);
+    }
+}

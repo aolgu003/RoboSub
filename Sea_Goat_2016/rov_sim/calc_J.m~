@@ -1,0 +1,16 @@
+function [ J ] = calc_J( n )
+%UNTITLED Summary of this function goes here
+%   Detailed explanation goes here
+phi
+
+
+R = [ ; 
+      ;
+       ];
+T = ;
+
+
+J = [R zeros([3 3]); zeros([3 3]) T]
+
+end
+

@@ -1,0 +1,20 @@
+add_executable(test_mission main.cpp)
+target_link_libraries(test_mission 
+					${OpenCV_LIBS} 
+					comms 
+					seagoat_vision 
+					segmentation  
+					)
+
+
+install ( TARGETS comms DESTINATION bin )
+install ( FILES cArduino.h DESTINATION include )
+
+install ( TARGETS seagoat_vision DESTINATION bin )
+install ( FILES seagoat_vision.h DESTINATION include )
+
+install ( TARGETS segmentation DESTINATION bin )
+install ( FILES segmentation.h DESTINATION include )
+
+
+install ( TARGETS test_mission DESTINATION bin )

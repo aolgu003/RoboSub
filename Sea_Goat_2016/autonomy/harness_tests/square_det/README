@@ -1,0 +1,9 @@
+This program is supposed be for ground marker detection and for marker attitude/position calculation. 
+
+
+So far detection has been implemented and the attitude/position calculation implementation are in progress. In order to run do the following:
+    mkdir build
+    cd build
+    cmake ..
+    make
+    ./squares

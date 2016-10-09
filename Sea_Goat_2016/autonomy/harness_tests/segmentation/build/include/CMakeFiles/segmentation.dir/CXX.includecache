@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/andrew/Projects/RoboSub/Sea_Goat_2016/autonomy/vision/harness_tests/segmentation/include/segmentation.cpp
+segmentation.h
+/home/andrew/Projects/RoboSub/Sea_Goat_2016/autonomy/vision/harness_tests/segmentation/include/segmentation.h
+opencv2/core/core.hpp
+/home/andrew/Projects/RoboSub/Sea_Goat_2016/autonomy/vision/harness_tests/segmentation/include/opencv2/core/core.hpp
+opencv2/imgproc/imgproc.hpp
+/home/andrew/Projects/RoboSub/Sea_Goat_2016/autonomy/vision/harness_tests/segmentation/include/opencv2/imgproc/imgproc.hpp
+opencv2/highgui/highgui.hpp
+/home/andrew/Projects/RoboSub/Sea_Goat_2016/autonomy/vision/harness_tests/segmentation/include/opencv2/highgui/highgui.hpp
+iostream
+-
+math.h
+-
+string
+-
+fstream
+-
+
+/home/andrew/Projects/RoboSub/Sea_Goat_2016/autonomy/vision/harness_tests/segmentation/include/segmentation.h
+opencv2/core/core.hpp
+/home/andrew/Projects/RoboSub/Sea_Goat_2016/autonomy/vision/harness_tests/segmentation/include/opencv2/core/core.hpp
+opencv2/imgproc/imgproc.hpp
+/home/andrew/Projects/RoboSub/Sea_Goat_2016/autonomy/vision/harness_tests/segmentation/include/opencv2/imgproc/imgproc.hpp
+opencv2/highgui/highgui.hpp
+/home/andrew/Projects/RoboSub/Sea_Goat_2016/autonomy/vision/harness_tests/segmentation/include/opencv2/highgui/highgui.hpp
+iostream
+-
+math.h
+-
+string
+-
+fstream
+-
+

@@ -1,0 +1,42 @@
+#include "opencv2/core/core.hpp"
+#include "opencv2/imgproc/imgproc.hpp"
+#include "opencv2/highgui/highgui.hpp"
+#include <iostream>
+#include <math.h>
+#include <string>
+#include <fstream>
+#include "segmentation.h"
+#include <sys/stat.h>
+#include <cstdlib>
+
+using namespace std;
+using namespace cv;
+
+int main(int /*argc*/, char** /*argv*/)
+{
+	ostringstream InputImage;
+	
+    vector<vector<Point> > squares;
+	segmentation segMarker(1);
+	Mat result_image;
+	int nj;
+    for( int i = 0; i < 541; i++ ) {
+		InputImage << "./../../image_data_set/Competition/CompetitionRuns2/_Recordings_/Bottom/";
+		InputImage << "Image" << i << ".png";
+        segMarker.result = imread(InputImage.str());
+		if( segMarker.result.empty() )
+        {
+            cout << "Couldn't load " << InputImage.str() << endl;
+            continue;
+			InputImage.str("");
+			InputImage.clear();
+			waitKey(0);
+        }
+		//segMarker.highlight_invarient();
+		imshow("Input image", segMarker.result);
+		waitKey(0);
+		
+		InputImage.str("");
+		InputImage.clear();
+	}
+}

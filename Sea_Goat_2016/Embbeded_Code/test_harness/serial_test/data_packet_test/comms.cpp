@@ -1,0 +1,40 @@
+#include "comms.h"
+
+const char* make_packet(int *length, const packet *pkt) {
+    std::string full_packet;
+    // begin block
+    full_packet += PKT_START_H;
+    full_packet += PKT_START_L;
+    
+    // info block
+    full_packet += pkt->type;
+    full_packet += pkt->size;
+
+    // data block (varies by type)
+
+    // checksum block (Fletcher)
+    unsigned char checksum_H = 0, checksum_L = 0;
+    for(unsigned int i = 0; i < full_packet.length(); i++) {
+        checksum_H += (int)full_packet[i];
+        checksum_L += checksum_H;
+    }
+    full_packet += checksum_H;
+    full_packet += checksum_L;
+
+
+    // end block
+    full_packet += PKT_END_H;
+    full_packet += PKT_END_L;
+
+    *length = full_packet.size();
+    return full_packet.c_str();
+}
+
+
+const char* make_hello_packet(int *length) {
+    packet hello_packet;
+    hello_packet.type = PKT_TYPE_HELLO;
+    hello_packet.size = PKT_SIZE_NULL;
+    return make_packet(length, &hello_packet);
+}
+

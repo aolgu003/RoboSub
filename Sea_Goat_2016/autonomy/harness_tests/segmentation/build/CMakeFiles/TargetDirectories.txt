@@ -1,0 +1,3 @@
+/home/andrew/Projects/RoboSub/Sea_Goat_2016/autonomy/vision/harness_tests/segmentation/build/CMakeFiles/competition_test.dir
+/home/andrew/Projects/RoboSub/Sea_Goat_2016/autonomy/vision/harness_tests/segmentation/build/CMakeFiles/lighting_test.dir
+/home/andrew/Projects/RoboSub/Sea_Goat_2016/autonomy/vision/harness_tests/segmentation/build/include/CMakeFiles/segmentation.dir

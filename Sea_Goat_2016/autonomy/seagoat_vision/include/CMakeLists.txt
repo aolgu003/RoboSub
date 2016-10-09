@@ -1,0 +1,3 @@
+add_library(seagoat_vision SHARED seagoat_vision.cpp)
+add_library(segmentation SHARED segmentation.cpp)
+add_library(comms SHARED comms.cpp)

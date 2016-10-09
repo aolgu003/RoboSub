@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC    -shared -Wl,-soname,libcomms.so -o libcomms.so CMakeFiles/comms.dir/comms.cpp.o 
